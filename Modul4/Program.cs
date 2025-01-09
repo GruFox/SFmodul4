@@ -16,39 +16,55 @@ namespace Modul4
             double Y;
             bool C = (A < B) | (X > Y);*/
 
-            Console.Write("Напишите свой любимый цвет на английском с маленькой буквы: ");
-            var color = Console.ReadLine();
+            int t = 0;
 
-            switch (color)
+            while (true)
             {
-                case "red":
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine(t);
+                Console.Write("Напишите свой любимый цвет на английском с маленькой буквы: ");
 
-                    Console.WriteLine("Your color is red!");
-                break;
+                var text = Console.ReadLine();
 
-                case "green":
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine("Your color is red!");
-                break;
-
-                case "cyan":
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine("Your color is cyan!");
-                break;
-
-                default:
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Red;
-
-                    Console.WriteLine("Your color is yellow!");
+                if (text == "stop")
+                {
+                    Console.WriteLine("Цикл остановлен");
                     break;
+                }
+
+                switch (text)
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is red!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is red!");
+                        break;
+
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is cyan!");
+                        break;
+
+                    default:
+                        //Console.BackgroundColor = ConsoleColor.Yellow;
+                        //Console.ForegroundColor = ConsoleColor.Red;
+
+                        //Console.WriteLine("Your color is yellow!");
+                        //break;
+                        continue;
+                }
+                t++;
             }
+            
 
             
 
