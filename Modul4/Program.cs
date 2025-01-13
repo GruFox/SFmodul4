@@ -268,7 +268,7 @@
 
 
 
-            (string Name, string Type, double Age, int NameCount) Pet;
+            /*(string Name, string Type, double Age, int NameCount) Pet;
 
             Console.Write("Введите имя Вашего домашнего животного: ");
             Pet.Name = Console.ReadLine();
@@ -284,7 +284,47 @@
             Console.Write("У Вас есть {0} ", Pet.Type);
             Console.Write(", которую зовут " + Pet.Name);
             Console.WriteLine(", и её возраст " + Pet.Age + ".");
-            Console.WriteLine("Длина имени Вашего питомца: {0}" + " символов.", Pet.NameCount);
+            Console.WriteLine("Длина имени Вашего питомца: {0}" + " символов.", Pet.NameCount);*/
+
+
+
+
+
+
+            (string Name, string LastName, string Login, int LoginLength, bool HasPet, double Age, string[] favcolors) User;
+            
+            int MaxNumberOfUsers = 1;
+            
+            while (MaxNumberOfUsers < 4)
+            {
+                Console.WriteLine("Введите имя");
+                User.Name = Console.ReadLine();
+
+                Console.WriteLine("Введите фамилию");
+                User.LastName = Console.ReadLine();
+
+                Console.WriteLine("Введите логин");
+                User.Login = Console.ReadLine();
+
+                User.LoginLength = User.Login.Length;
+
+                Console.WriteLine("Есть ли у Вас животные? Да или Нет");
+                if (Console.ReadLine() == "Да") User.HasPet = true;
+                else User.HasPet = false;
+
+                Console.WriteLine("Введите возраст пользователя");
+                User.Age = double.Parse(Console.ReadLine());
+
+                User.favcolors = new string[3];
+                Console.WriteLine("Введите три любимых цвета пользователя");
+                for (int i = 0; i < User.favcolors.Length; i++)
+                {
+                    User.favcolors[i] = Console.ReadLine();
+                }
+
+                MaxNumberOfUsers++;
+            }
+
 
 
 
