@@ -207,7 +207,7 @@
 
 
 
-            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            /*int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
 
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -247,7 +247,44 @@
                 Console.WriteLine();
             }
 
-            Console.WriteLine();
+            Console.WriteLine();*/
+
+
+
+
+
+            /*var (name, age) = ("Andrej", 30);
+
+            Console.WriteLine("Моё имя: {0}", name);
+            Console.WriteLine("Мой возраст: {0}" + " лет", age);
+
+            Console.Write("Напишите Ваше имя: ");
+            name = Console.ReadLine();
+            Console.Write("Напишите Ваш возраст цифрами: ");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя " + name + " и Ваш возраст " + age + " лет.");*/
+
+
+
+
+            (string Name, string Type, double Age, int NameCount) Pet;
+
+            Console.Write("Введите имя Вашего домашнего животного: ");
+            Pet.Name = Console.ReadLine();
+
+            Console.Write("Введите тим Вашего питомца: ");
+            Pet.Type = Console.ReadLine();
+
+            Console.Write("Введите возраст Вашего питомца: ");
+            Pet.Age = Convert.ToDouble(Console.ReadLine());
+
+            Pet.NameCount = Pet.Name.Length;
+
+            Console.Write("У Вас есть {0} ", Pet.Type);
+            Console.Write(", которую зовут " + Pet.Name);
+            Console.WriteLine(", и её возраст " + Pet.Age + ".");
+            Console.WriteLine("Длина имени Вашего питомца: {0}" + " символов.", Pet.NameCount);
 
 
 
